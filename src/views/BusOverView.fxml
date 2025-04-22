@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BusOverView">
+   <children>
+      <AnchorPane layoutX="415.0" layoutY="174.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="seatViewAnchorepane" layoutY="264.0" visible="false">
+               <children>
+                  <TableView fx:id="tableseatShow" prefHeight="437.0" prefWidth="800.0">
+                    <columns>
+                      <TableColumn fx:id="Col_seat_number" prefWidth="267.1999816894531" text="Seat number" />
+                        <TableColumn fx:id="Col_booking_status" prefWidth="267.1999816894531" text="Booking status" />
+                        <TableColumn fx:id="Col_ticket_id" prefWidth="267.1999816894531" text="Ticket id" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="35.0" prefWidth="800.0" style="-fx-background-color: #ff991c;">
+               <children>
+                  <ImageView fx:id="ImgBackArrow" fitHeight="58.0" fitWidth="32.0" layoutX="5.0" layoutY="2.0" onMousePressed="#GoToPrevious" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/backArrow.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="339.0" layoutY="-2.0" prefHeight="35.0" prefWidth="159.0" text="Bus overView" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <VBox layoutX="3.0" layoutY="50.0" prefHeight="158.0" prefWidth="114.0">
+               <children>
+                  <Label alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="98.0" text="Bus Name:" />
+                  <Label alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="98.0" text="Bus id:" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="97.0" text="Journey date:" />
+                  <Label alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="98.0" text="Starting location:" />
+                  <Label alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="98.0" text="Destination:" />
+                  <Label alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="98.0" text="Type:" />
+                  <Label alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="98.0" text="Fare:" />
+                  <Label alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="98.0" text="Starting time:" />
+               </children>
+            </VBox>
+            <VBox layoutX="126.0" layoutY="50.0" prefHeight="194.0" prefWidth="138.0">
+               <children>
+                  <Label fx:id="LabelName" prefHeight="18.0" prefWidth="138.0" text="Label" />
+                  <Label fx:id="LabelBusId" prefHeight="18.0" prefWidth="138.0" text="Label" />
+                  <Label fx:id="labelJourneyDate" prefHeight="18.0" prefWidth="138.0" text="Label" />
+                  <Label fx:id="LabelStartingLocation" prefHeight="18.0" prefWidth="138.0" text="Label" />
+                  <Label fx:id="LabelDestination" prefHeight="18.0" prefWidth="138.0" text="Label" />
+                  <Label fx:id="LabelType" prefHeight="18.0" prefWidth="138.0" text="Label" />
+                  <Label fx:id="LabelFare" prefHeight="18.0" prefWidth="138.0" text="Label" />
+                  <Label fx:id="LabelStartingTime" prefHeight="18.0" prefWidth="138.0" text="Label" />
+               </children>
+            </VBox>
+            <VBox layoutX="472.0" layoutY="47.0" prefHeight="200.0" prefWidth="187.0">
+               <children>
+                  <Label alignment="TOP_RIGHT" prefHeight="27.0" prefWidth="113.0" text="Total seat:" />
+                  <Label alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="114.0" text="Booked seat:" />
+                  <Label alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="114.0" text="Available seat:" />
+                  <Label prefHeight="43.0" prefWidth="190.0" text="Total revenew:" textFill="#ff991c">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="665.0" layoutY="42.0" prefHeight="200.0" prefWidth="130.0">
+               <children>
+                  <Label fx:id="LabelTotalSeat" prefHeight="30.0" prefWidth="100.0" text="Label" />
+                  <Label fx:id="LabelBookedSeat" prefHeight="29.0" prefWidth="100.0" text="Label" />
+                  <Label fx:id="LabelAvailableSeat" prefHeight="30.0" prefWidth="100.0" text="Label" />
+                  <Label fx:id="totalRevenew" prefHeight="50.0" prefWidth="123.0" text="Label">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="3.0" layoutY="276.0" prefHeight="200.0" prefWidth="200.0" />
+            <AnchorPane fx:id="ticketViewAnchorepane" layoutX="-1.0" layoutY="265.0">
+               <children>
+                  <TableView fx:id="tableTicketShow" prefHeight="437.0" prefWidth="800.0">
+                     <columns>
+                        <TableColumn fx:id="col_ticektId" prefWidth="86.40002286434174" text="Ticket ID" />
+                        <TableColumn fx:id="col_bookedSeats" prefWidth="135.19998931884766" text="Booked seats" />
+                        <TableColumn fx:id="col_bookedBy" prefWidth="156.00006103515625" text="Booked By" />
+                        <TableColumn fx:id="col_phoneNumber" prefWidth="136.80001831054688" text="Phone" />
+                        <TableColumn fx:id="col_email" prefWidth="168.7999267578125" text="Email" />
+                        <TableColumn fx:id="col_issueDate" prefWidth="114.4000244140625" text="Issue Date" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <Button fx:id="butttonshowseats" layoutX="20.0" layoutY="232.0" mnemonicParsing="false" stylesheets="@../CssFiles/style.css" text="Show seats">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="boxShadow" />
+               </styleClass>
+            </Button>
+            <Button fx:id="butttonshowTickets" layoutX="116.0" layoutY="232.0" mnemonicParsing="false" stylesheets="@../CssFiles/style.css" text="Show tickets">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="boxShadow" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

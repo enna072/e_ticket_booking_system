@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,10 +13,10 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="800.0" styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpPageController">
+<AnchorPane prefHeight="700.0" prefWidth="800.0" styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpPageController">
    <children>
       <BorderPane layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -40,200 +40,146 @@
             </HBox>
          </top>
          <center>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <AnchorPane BorderPane.alignment="CENTER">
                <children>
-                  <VBox alignment="CENTER" prefHeight="614.0" prefWidth="330.0">
+                  <HBox />
+                  <AnchorPane prefHeight="660.0" prefWidth="800.0">
                      <children>
-                        <Label prefHeight="54.0" prefWidth="145.0" text="Let's join" textFill="#ff991c">
-                           <font>
-                              <Font name="Cambria" size="35.0" />
-                           </font>
-                        </Label>
-                        <Label text="with " textFill="#ff991c">
-                           <font>
-                              <Font size="21.0" />
-                           </font>
-                        </Label>
-                        <Label text="MY TICKET" textFill="#ff991c">
-                           <font>
-                              <Font size="35.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-                  <HBox prefHeight="564.0" prefWidth="525.0" stylesheets="@style.css">
-                     <HBox.margin>
-                        <Insets right="20.0" top="10.0" />
-                     </HBox.margin>
-                     <styleClass>
-                        <String fx:value="signupBox" />
-                        <String fx:value="boxShadow" />
-                     </styleClass>
-                     <children>
-                        <VBox alignment="CENTER" prefHeight="563.0" prefWidth="300.0">
+                        <HBox alignment="CENTER" layoutX="74.0" layoutY="100.0" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
                            <children>
-                              <HBox alignment="CENTER" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
-                                 <children>
-                                    <TextField fx:id="first_name_text_field" prefHeight="26.0" prefWidth="245.0" promptText="Enter first name" styleClass="transparentback" stylesheets="@style.css" />
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="50.0" left="20.0" right="20.0" />
-                                 </VBox.margin>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
-                                 <children>
-                                    <TextField fx:id="last_name_text_field" prefHeight="26.0" prefWidth="245.0" promptText="Enter last name" styleClass="transparentback" stylesheets="@style.css">
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                    </TextField>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </VBox.margin>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
-                                 <children>
-                                    <TextField fx:id="phone_number_text_field" prefHeight="26.0" prefWidth="245.0" promptText="Phone number" styleClass="transparentback" stylesheets="@style.css" />
-                                    <ImageView fitHeight="24.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/contact_phone_24dp_5F6368.png" />
-                                       </image>
-                                       <HBox.margin>
-                                          <Insets right="10.0" />
-                                       </HBox.margin>
-                                    </ImageView>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets left="20.0" right="20.0" top="50.0" />
-                                 </VBox.margin>
-                              </HBox>
-                              <HBox prefHeight="41.0" prefWidth="300.0">
-                                 <padding>
-                                    <Insets bottom="50.0" top="20.0" />
-                                 </padding>
-                                 <children>
-                                    <CheckBox fx:id="male_check_box" mnemonicParsing="false" onAction="#male_check_box_click" style="-fx-border-color: #FDFBD4;" text="Male">
-                                       <HBox.margin>
-                                          <Insets left="20.0" right="10.0" />
-                                       </HBox.margin>
-                                    </CheckBox>
-                                    <CheckBox fx:id="female_check_box" mnemonicParsing="false" onAction="#female_check_box_click" text="Female" />
-                                    <CheckBox fx:id="others_check_box" mnemonicParsing="false" onAction="#other_check_box_click" text="Others">
-                                       <HBox.margin>
-                                          <Insets left="10.0" />
-                                       </HBox.margin>
-                                    </CheckBox>
-                                 </children>
-                              </HBox>
-                              <Button fx:id="joinButton" mnemonicParsing="false" onAction="#goToCongratulationPage" style="-fx-background-color: #ff991c; -fx-text-fill: #FFFFFF; -fx-background-radius: 20;" text="Join" />
+                              <TextField fx:id="first_name_text_field" prefHeight="26.0" prefWidth="245.0" promptText="Enter first name" styleClass="transparentback" stylesheets="@style.css" />
                            </children>
-                        </VBox>
-                        <VBox alignment="CENTER" prefHeight="563.0" prefWidth="300.0">
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="74.0" layoutY="203.0" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
                            <children>
-                              <HBox alignment="CENTER" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
-                                 <children>
-                                    <TextField fx:id="email_text_field" prefHeight="26.0" prefWidth="170.0" promptText="Enter Email" styleClass="transparentback" stylesheets="@style.css" />
-                                    <ImageView fitHeight="24.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/email_24dp_5F6368.png" />
-                                       </image>
-                                       <HBox.margin>
-                                          <Insets right="10.0" />
-                                       </HBox.margin>
-                                    </ImageView>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="50.0" left="20.0" right="20.0" />
-                                 </VBox.margin>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
-                                 <children>
-                                    <DatePicker fx:id="datePicker" prefHeight="26.0" prefWidth="188.0" promptText="Enter date of birth" style="-fx-background-color: #FFFFFF;" styleClass="datepicker" stylesheets="@style.css" />
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </VBox.margin>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
-                                 <children>
-                                    <TextField fx:id="address_text_field" prefHeight="26.0" prefWidth="245.0" promptText="Enter address" styleClass="transparentback" stylesheets="@style.css" />
-                                    <ImageView fitHeight="24.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/home_24dp_5F6368.png" />
-                                       </image>
-                                       <HBox.margin>
-                                          <Insets right="10.0" />
-                                       </HBox.margin>
-                                    </ImageView>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="50.0" />
-                                 </VBox.margin>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
-                                 <children>
-                                    <TextField fx:id="password_text_field" prefHeight="26.0" prefWidth="170.0" promptText="password" styleClass="transparentback" stylesheets="@style.css" />
-                                    <ImageView fitHeight="24.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/passkey.png" />
-                                       </image>
-                                       <HBox.margin>
-                                          <Insets right="15.0" />
-                                       </HBox.margin>
-                                    </ImageView>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="50.0" left="20.0" right="20.0" />
-                                 </VBox.margin>
-                              </HBox>
+                              <TextField fx:id="last_name_text_field" prefHeight="26.0" prefWidth="245.0" promptText="Enter last name" styleClass="transparentback" stylesheets="@style.css">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
                            </children>
-                        </VBox>
-                     </children>
-                  </HBox>
-               </children>
-            </HBox>
-         </center>
-         <bottom>
-            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="800.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Pane prefHeight="54.0" prefWidth="282.0" />
-                  <HBox alignment="CENTER" prefHeight="49.0" prefWidth="207.0" style="-fx-background-color: #FFFFFF;">
-                     <children>
-                        <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/facebook.png" />
-                           </image>
-                        </ImageView>
-                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="166.0" style="-fx-text-fill: #ff; -fx-alignment: left;" text="Sing up with Facebook" textFill="#ff991c">
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="74.0" layoutY="316.0" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
+                           <children>
+                              <TextField fx:id="phone_number_text_field" prefHeight="26.0" prefWidth="245.0" promptText="Phone number" styleClass="transparentback" stylesheets="@style.css" />
+                              <ImageView fitHeight="24.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/contact_phone_24dp_5F6368.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="74.0" layoutY="379.0" prefHeight="41.0" prefWidth="300.0">
                            <padding>
-                              <Insets left="40.0" />
-                           </padding></Label>
-                     </children>
-                     <HBox.margin>
-                        <Insets bottom="10.0" right="20.0" top="10.0" />
-                     </HBox.margin>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="52.0" prefWidth="191.0" style="-fx-background-color: #FFFFFF;">
-                     <children>
-                        <ImageView fitHeight="18.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/google.png" />
-                           </image>
-                        </ImageView>
-                        <Label alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="154.0" style="-fx-text-fill: #ff; -fx-alignment: left;" text="Sing up with Google" textAlignment="JUSTIFY" textFill="#ff991c">
-                           <padding>
-                              <Insets left="40.0" />
+                              <Insets bottom="50.0" top="20.0" />
                            </padding>
-                        </Label>
+                           <children>
+                              <CheckBox fx:id="male_check_box" mnemonicParsing="false" onAction="#male_check_box_click" style="-fx-border-color: #FDFBD4;" text="Male">
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="10.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                              <CheckBox fx:id="female_check_box" mnemonicParsing="false" onAction="#female_check_box_click" text="Female" />
+                              <CheckBox fx:id="others_check_box" mnemonicParsing="false" onAction="#other_check_box_click" text="Others">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                           </children>
+                        </HBox>
+                        <Button fx:id="joinButton" layoutX="374.0" layoutY="462.0" mnemonicParsing="false" onAction="#goToCongratulationPage" style="-fx-background-color: #ff991c; -fx-text-fill: #FFFFFF; -fx-background-radius: 20;" text="Join" />
+                        <HBox alignment="CENTER" layoutX="467.0" layoutY="295.0" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
+                           <children>
+                              <TextField fx:id="address_text_field" prefHeight="26.0" prefWidth="245.0" promptText="Enter address" styleClass="transparentback" stylesheets="@style.css" />
+                              <ImageView fitHeight="24.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/home_24dp_5F6368.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="467.0" layoutY="382.0" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
+                           <children>
+                              <StackPane prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="password_visible_text_field" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: transparent;" />
+                                    <PasswordField fx:id="password_text_field" prefHeight="26.0" prefWidth="236.0" promptText="Enter an 8 digit password" style="-fx-background-color: transparent;" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="20.0" prefWidth="36.0">
+                                 <children>
+                                    <ImageView fx:id="passwordVisible" fitHeight="24.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/passkeyVisibility.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="passwordVisibilityoff" fitHeight="24.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/passKeyVisibilityOff.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="236.0" layoutY="15.0" />
+                        <HBox alignment="CENTER" layoutX="458.0" layoutY="203.0" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
+                           <children>
+                              <DatePicker fx:id="datePicker" prefHeight="26.0" prefWidth="253.0" promptText="Enter date of birth" style="-fx-background-color: #FFFFFF;" styleClass="datepicker" stylesheets="@style.css" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="311.0" layoutY="544.0" prefHeight="30.0" prefWidth="207.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/facebook.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="166.0" style="-fx-text-fill: #ff; -fx-alignment: left;" text="Sing up with Facebook" textFill="#ff991c">
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="309.0" layoutY="584.0" prefHeight="30.0" prefWidth="209.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <ImageView fitHeight="18.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/google.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="154.0" style="-fx-text-fill: #ff; -fx-alignment: left;" text="Sing up with Google" textAlignment="JUSTIFY" textFill="#ff991c">
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
                      </children>
-                     <HBox.margin>
-                        <Insets bottom="10.0" right="20.0" top="10.0" />
-                     </HBox.margin>
+                  </AnchorPane>
+                  <HBox alignment="CENTER" layoutX="461.0" layoutY="98.0" prefHeight="42.0" prefWidth="285.0" styleClass="signupinputBox" stylesheets="@style.css">
+                     <children>
+                        <TextField fx:id="email_text_field" prefHeight="26.0" prefWidth="170.0" promptText="Enter Email" styleClass="transparentback" stylesheets="@style.css" />
+                        <ImageView fitHeight="24.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/email_24dp_5F6368.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
                   </HBox>
                </children>
-            </HBox>
-         </bottom>
+            </AnchorPane>
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>

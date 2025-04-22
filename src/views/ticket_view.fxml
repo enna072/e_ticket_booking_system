@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TicketView">
+   <children>
+      <AnchorPane layoutY="6.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="-1.0" layoutY="-2.0" prefHeight="50.0" prefWidth="807.0" style="-fx-background-color: #ff991c;">
+               <children>
+                  <ImageView fx:id="gotoDashBoard" fitHeight="29.0" fitWidth="36.0" layoutY="6.0" onMousePressed="#goTouserDahsboard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/backArrow.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="300.0" layoutY="12.0" prefHeight="18.0" prefWidth="134.0" text="Ticket Details" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="172.0" layoutY="83.0" prefHeight="571.0" prefWidth="444.0" style="-fx-background-color: #fefeb9; -fx-border-radius: 30;" styleClass="boxShadow" stylesheets="@style.css">
+               <children>
+                  <Label alignment="CENTER_RIGHT" layoutX="6.0" layoutY="14.0" prefHeight="30.0" prefWidth="169.0" text="Booked by:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelHOldsThenemoftheticketHolder" layoutX="202.0" layoutY="17.0" prefHeight="27.0" prefWidth="270.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="4.0" layoutY="170.0" prefHeight="30.0" prefWidth="169.0" text="Journey Date:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabeljourneyDateHolder" layoutX="200.0" layoutY="173.0" prefHeight="18.0" prefWidth="148.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="3.0" layoutY="227.0" prefHeight="30.0" prefWidth="169.0" text="Starting location:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabelHoldsStartingLocation" layoutX="199.0" layoutY="230.0" prefHeight="18.0" prefWidth="148.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="6.0" layoutY="281.0" prefHeight="30.0" prefWidth="169.0" text="Destination:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabelHoldsDestination" layoutX="198.0" layoutY="283.0" prefHeight="18.0" prefWidth="148.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="1.0" layoutY="339.0" prefHeight="30.0" prefWidth="169.0" text="Starting time:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabelStartingTime" layoutX="197.0" layoutY="342.0" prefHeight="18.0" prefWidth="148.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutY="392.0" prefHeight="30.0" prefWidth="169.0" text="Booked seat">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabelBookedSeeat" layoutX="196.0" layoutY="395.0" prefHeight="18.0" prefWidth="148.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabelProviderHolder" alignment="CENTER_RIGHT" layoutX="4.0" layoutY="64.0" prefHeight="30.0" prefWidth="169.0" text="provider:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabelProviderHoldeer" layoutX="200.0" layoutY="67.0" prefHeight="18.0" prefWidth="148.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="4.0" layoutY="118.0" prefHeight="30.0" prefWidth="169.0" text="Coach Id:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabelCoachHolder" layoutX="200.0" layoutY="121.0" prefHeight="18.0" prefWidth="148.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutY="468.0" prefHeight="30.0" prefWidth="169.0" text="Total Fare:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="TotalFareHolder" layoutX="196.0" layoutY="471.0" prefHeight="18.0" prefWidth="148.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="-3.0" layoutY="430.0" prefHeight="30.0" prefWidth="169.0" text="Type:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="TypeLabel" layoutX="193.0" layoutY="433.0" prefHeight="18.0" prefWidth="148.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

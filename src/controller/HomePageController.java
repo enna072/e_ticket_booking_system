@@ -9,10 +9,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -46,7 +44,7 @@ public class HomePageController implements Initializable {
     @FXML
     void goToLoginPage(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/views/loginPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/views/UserloginPage.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();
@@ -56,6 +54,8 @@ public class HomePageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
         Menu.setOnMouseClicked(event -> {
             TranslateTransition slide = new TranslateTransition();
             slide.setDuration(Duration.seconds(0.4));
@@ -88,6 +88,7 @@ public class HomePageController implements Initializable {
         });
 
     }
+
     @FXML
     void goToFoodItemPage(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/views/food.fxml"));
@@ -103,6 +104,7 @@ public class HomePageController implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
     @FXML
     void goToTrainBook(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/views/search_train.fxml"));
@@ -111,9 +113,10 @@ public class HomePageController implements Initializable {
         stage.show();
 
     }
+
     @FXML
     void goToDashboard(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/views/UserDashBaord.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/views/UserDashBoard.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
@@ -127,6 +130,7 @@ public class HomePageController implements Initializable {
         stage.show();
 
     }
+
     @FXML
     void goToPayment(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/views/payment.fxml"));

@@ -1,6 +1,9 @@
 package EntityClasses;
 
-import java.util.Date;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
+import java.sql.Date;
 
 public class EntityUser {
     private String first_name;
@@ -105,5 +108,26 @@ public class EntityUser {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+
+    public StringProperty getPropertyFullname() {
+        return new SimpleStringProperty(getFirst_name() + " " + getLast_name());
+    }
+
+    public StringProperty getpropertyUserId() {
+        return new SimpleStringProperty(User_name);
+    }
+
+    public StringProperty getpropertyPhoneNumber() {
+        return new SimpleStringProperty(phone);
+    }
+
+    public StringProperty getpropertyEmail() {
+        return new SimpleStringProperty(email);
+    }
+
+    public StringProperty getproertyAddress() {
+        return new SimpleStringProperty(address);
     }
 }

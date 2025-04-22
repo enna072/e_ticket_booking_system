@@ -16,17 +16,23 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.regex.Pattern;
+import java.sql.Date;
 
 public class SignUpPageController extends Application {
     public Stage stage;
     @FXML
     private ImageView backtoHome;
     @FXML
+    private TextField password_visible_text_field;
+    @FXML
     private Button joinButton;
     @FXML
-    private TextField password_text_field;
+    private ImageView passwordVisibilityoff;
+
+    @FXML
+    private ImageView passwordVisible;
+    @FXML
+    private PasswordField password_text_field;
 
     @FXML
     private TextField address_text_field;
@@ -66,7 +72,7 @@ public class SignUpPageController extends Application {
 
     @FXML
     void gotoHomePage(MouseEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("/views/loginPage.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("/views/UserloginPage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         double width = stage.getWidth();
         double height = stage.getHeight();
@@ -125,7 +131,7 @@ public class SignUpPageController extends Application {
                 // Retrieve the controller
                 confirm_sign_up_controller controller = loader.getController();
 
-                controller.setText(user_name);
+                controller.setText(user_name, "/views/UserloginPage.fxml");
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(new Scene(root));
                 stage.show();
@@ -175,6 +181,23 @@ public class SignUpPageController extends Application {
     private void initialize() {
 
 
+        // Ensure the TextField and PasswordField are synced
+        password_visible_text_field.managedProperty().bind(passwordVisibilityoff.visibleProperty());
+        password_visible_text_field.visibleProperty().bind(passwordVisibilityoff.visibleProperty());
+        password_text_field.managedProperty().bind(passwordVisible.visibleProperty());
+        password_text_field.visibleProperty().bind(passwordVisible.visibleProperty());
+
+        // Sync the text between PasswordField and TextField
+        password_visible_text_field.textProperty().bindBidirectional(password_text_field.textProperty());
+
+        passwordVisible.setOnMouseClicked(mouseEvent -> {
+            passwordVisibilityoff.setVisible(true);
+            passwordVisible.setVisible(false);
+        });
+        passwordVisibilityoff.setOnMouseClicked(mouseEvent -> {
+            passwordVisible.setVisible(true);
+            passwordVisibilityoff.setVisible(false);
+        });
         // Add listener for validation
         first_name_text_field.textProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue.matches("[a-zA-Z ]*")) {

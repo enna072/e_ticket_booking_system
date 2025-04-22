@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserDashBoardController">
+    <!-- Header Section -->
+    <top>
+        <HBox prefHeight="54.0" prefWidth="898.0" spacing="10" style="-fx-background-color: #ff991c; -fx-padding: 10;">
+         <ImageView fx:id="GoToHomepage" fitHeight="35.0" fitWidth="59.0" onMousePressed="#GoToHomepage" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/backbutton.png" />
+            </image>
+         </ImageView>
+            <Label prefHeight="34.0" prefWidth="101.0" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Dashboard">
+            <HBox.margin>
+               <Insets left="400.0" right="250.0" />
+            </HBox.margin></Label>
+        </HBox>
+    </top>
+
+    <!-- Sidebar Section -->
+    <left>
+        <VBox spacing="15" style="-fx-background-color: #f5f5f5; -fx-padding: 15;">
+            <Button fx:id="Button_for_view_on_goingView" onAction="#on_going_journey" style="-fx-font-size: 14px;" stylesheets="@style.css" text="On going journeys">
+            <styleClass>
+               <String fx:value="loginButton" />
+               <String fx:value="boxShadow" />
+            </styleClass></Button>
+            <Button fx:id="ButtonForVIewTripHistory" onAction="#historyTrip" style="-fx-font-size: 14px;" stylesheets="@style.css" text="History">
+            <styleClass>
+               <String fx:value="boxShadow" />
+               <String fx:value="loginButton" />
+            </styleClass></Button>
+        </VBox>
+    </left>
+
+    <!-- Footer Section -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #ff991c; -fx-padding: 10;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="© 2024 User Dashboard | All Rights Reserved" />
+        </HBox>
+    </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="AnchorepaneForOngoingtripView" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TableView fx:id="TableForViewingOngoingTrip" prefHeight="606.0" prefWidth="735.0">
+                    <columns>
+                      <TableColumn fx:id="Col_From_for_on_going_view" prefWidth="146.40002137422562" text="From" />
+                      <TableColumn fx:id="Col_to_for_on_going_view" prefWidth="124.80000305175781" text="To" />
+                        <TableColumn fx:id="Col_time_for_on_going_view" prefWidth="124.80000305175781" text="Time" />
+                        <TableColumn fx:id="Col_bus_name_for_on_going_view" prefWidth="124.80000305175781" text="Bus name" />
+                        <TableColumn fx:id="Col_Bus_type_holder_for_onGoingView" prefWidth="77.59991455078125" text="Type" />
+                        <TableColumn fx:id="Col_Journeydate_holder_for_onGoingView1" prefWidth="132.7999145507813" text="JourneyDate" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

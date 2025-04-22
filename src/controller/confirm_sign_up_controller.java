@@ -18,16 +18,18 @@ public class confirm_sign_up_controller {
     private Label user_name_holder;
     @FXML
     private Button goToLoginPage;
+    public String Fxmlfile;
 
     @FXML
     void goTOLoginPage(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/views/loginPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource(Fxmlfile));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
     }
 
-    public void setText(String userName) {
+    public void setText(String userName, String fxmlfile) {
+        this.Fxmlfile = fxmlfile;
         user_name_holder.setText("user_name: " + userName);
     }
 

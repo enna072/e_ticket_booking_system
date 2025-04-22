@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProviderDashboard">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="814.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="700.0" prefWidth="151.0" style="-fx-background-color: #ff9916;">
+               <children>
+                  <Button fx:id="Buttonlogout" layoutX="32.0" layoutY="661.0" mnemonicParsing="false" onAction="#goToproviderLoginpage" style="-fx-background-color: #FFFFFF;" styleClass="boxShadow" stylesheets="@style.css" text="logout" />
+                  <Button fx:id="ButtonShowAvailableBus" layoutY="105.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="139.0" stylesheets="@style.css" text="Show available Busses">
+                     <styleClass>
+                        <String fx:value="boxShadow" />
+                        <String fx:value="background" />
+                     </styleClass></Button>
+                  <Button fx:id="ButtonAddBus" layoutY="191.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="139.0" stylesheets="@style.css" text="Add bus">
+                     <styleClass>
+                        <String fx:value="boxShadow" />
+                        <String fx:value="background" />
+                     </styleClass></Button>
+                  <Label fx:id="nameHolder" layoutX="10.0" layoutY="30.0" prefHeight="30.0" prefWidth="119.0" text="Label">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonHisstory" layoutX="-1.0" layoutY="148.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="139.0" stylesheets="@style.css" text="History">
+                     <styleClass>
+                        <String fx:value="background" />
+                        <String fx:value="boxShadow" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="View_availableBus" layoutX="151.0" prefHeight="700.0" prefWidth="657.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Label fx:id="LabelHeader" layoutX="196.0" layoutY="14.0" prefHeight="34.0" prefWidth="190.0" text="Available busses" textFill="#ff991c">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="availableBusShowtable" layoutX="14.0" layoutY="77.0" prefHeight="622.0" prefWidth="642.0">
+                    <columns>
+                      <TableColumn fx:id="Col_Bus_id" editable="false" prefWidth="75.0" text="Bus id" />
+                        <TableColumn fx:id="Col_Bus_type" prefWidth="64.79998779296875" text="Type" />
+                        <TableColumn fx:id="Col_joirney_date" prefWidth="82.39996337890625" text="date" />
+                        <TableColumn fx:id="Col_journey_time" prefWidth="102.39996337890625" text="time" />
+                        <TableColumn fx:id="Col_fromLocation" prefWidth="95.20010375976562" text="From" />
+                        <TableColumn fx:id="Col_destination" prefWidth="115.199951171875" text="To" />
+                        <TableColumn fx:id="Col_fair" prefWidth="118.4000244140625" text="Fair" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ViewAddBus" layoutX="147.0" prefHeight="700.0" prefWidth="664.0" style="-fx-background-color: #FFFFFF;" visible="false">
+               <children>
+                  <AnchorPane layoutX="109.0" layoutY="137.0">
+                     <children>
+                        <HBox layoutY="146.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="71.0" text="Date:" />
+                              <DatePicker fx:id="DateForAddbus" prefHeight="26.0" prefWidth="246.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutY="186.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="71.0" text="starting time:" />
+                              <TextField fx:id="StartingTimeForAddBus" prefHeight="26.0" prefWidth="245.0" promptText="Enter bus id" />
+                           </children>
+                        </HBox>
+                        <HBox layoutY="47.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="71.0" text="From:" />
+                              <TextField fx:id="StartLocForAddBus" prefHeight="26.0" prefWidth="245.0" promptText="Enter start location" />
+                           </children>
+                        </HBox>
+                        <HBox layoutY="96.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="71.0" text="Destination:" />
+                              <TextField fx:id="destinationForAddBus" prefHeight="26.0" prefWidth="245.0" promptText="Enter Destination" />
+                           </children>
+                        </HBox>
+                        <HBox layoutY="234.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="71.0" text="Ending time:" />
+                              <TextField fx:id="DepartureTimeForAddBus" prefHeight="26.0" prefWidth="245.0" promptText="Enter bus id" />
+                           </children>
+                        </HBox>
+                        <HBox layoutY="292.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="71.0" text="Type:" />
+                              <ComboBox fx:id="typeComboboxForAddBus" prefHeight="26.0" prefWidth="245.0" promptText="AC/NON-AC" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="71.0" text="Bus id:" />
+                              <TextField fx:id="BusIdTextFieldForAddBus" prefHeight="26.0" prefWidth="245.0" promptText="Enter bus id" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="197.0" layoutY="29.0" prefHeight="58.0" prefWidth="212.0" text="Add bus" textAlignment="CENTER" textFill="#ff991c">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="Add_buttonForAddBus" layoutX="280.0" layoutY="578.0" mnemonicParsing="false" onAction="#addBus_final" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #FFFFFF;" styleClass="boxShadow" stylesheets="@style.css" text="Add" />
+                  <TextField fx:id="fairlabel" layoutX="180.0" layoutY="475.0" prefHeight="26.0" prefWidth="246.0" promptText="Enter fair" />
+                  <Label layoutX="120.0" layoutY="480.0" text="Fair:" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

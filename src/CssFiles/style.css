@@ -1,0 +1,105 @@
+/* Linear gradient in JavaFX */
+.background {
+     -fx-background-color:#FDFBD4;
+}
+.signupviewguest{
+-fx-background-color:#95B2B2;
+-fx-background-radius:30;
+}
+.loginSection{
+-fx-background-color:#FFFFFF;
+-fx-background-radius:30;
+ -fx-alignment: center;
+    -fx-margin: 0 auto;
+}
+/* Simple box shadow */
+.box {
+    width: 200px;
+    height: 100px;
+    background-color: #f5f5f5;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+/* Box shadow for buttons, panes, or any container */
+.boxShadow {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 5, 5);
+}
+.transparentback{
+-fx-background-color:transparent;
+ -fx-text-fill:black;
+}
+.signupinputBox{
+-fx-background-color:#FFFFFF;
+-fx-background-radius:30;
+ -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 5, 5);
+}
+.logininputBox{
+-fx-background-color:#FFFFFF;
+-fx-background-radius:30;}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: black; /* Adjust text color as needed */
+}
+
+.loginButton{
+-fx-background-color:#FEFBAC;
+-fx-background-radius:30;
+-fx-text-fill:#FFFFFF;
+}
+.signupButton{
+-fx-background-color:#ff991c;
+-fx-background-radius:30;
+-fx-text-fill:#FFFFFF;
+}
+.viewAsAGuestButton{
+-fx-background-color:#ff991c;
+-fx-background-radius:30;
+-fx-text-fill:#FFFFFF;
+}
+.signupBox{
+-fx-background-color:#FFFFFF;
+-fx-background-radius:30;
+}
+.bar{
+-fx-background-color:#FDFBD4;
+}
+
+.homepagebuttons{
+-fx-background-color:#ff991c;
+-fx-text-fill:#000000;
+-fx-background-radius:30;
+}
+
+
+.successfullsignupbox{
+-fx-background-color:#ff991c;
+}
+
+.login_in_successfull_login_box{
+-fx-background-color:#ff991c;
+-fx-text-fill:#FFFFFF;
+}
+
+.homepageButtonHolder{
+-fx-background-color:#FFFFFF;
+-fx-background-radius:30;
+}
+
+.whiteBackgroundBoxForSearchBus{
+-fx-background-color:#FFFFFF;
+-fx-background-radius:30;
+}
+
+.transparentInputboxforsearchBus{
+-fx-background-color:transparent;
+}
+
+.round{
+-fx-background-radius:20;
+}
+
+.roundBOx{
+-fx-background-color:#FFFFFF;
+-fx_background-radius:30:
+-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 5, 5);
+}

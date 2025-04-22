@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserLoginPageController">
+   <children>
+      <StackPane alignment="TOP_LEFT" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="608.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/busbackground_three.jpg" />
+               </image>
+            </ImageView>
+            <BorderPane prefHeight="701.0" prefWidth="670.0" style="-fx-background-color: transparent;" stylesheets="@style.css">
+               <top>
+                  <HBox alignment="CENTER" prefHeight="66.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="EticketImage" fitHeight="27.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/backArrow.png" />
+                           </image>
+                        </ImageView>
+                        <Pane prefHeight="66.0" prefWidth="422.0" />
+                        <HBox alignment="CENTER" prefHeight="66.0" prefWidth="327.0">
+                           <children>
+                              <Button fx:id="goToAdminPanel" minHeight="31.0" minWidth="87.0" mnemonicParsing="false" onAction="#goToAdminPanel" prefHeight="35.0" prefWidth="92.0" styleClass="loginButton" stylesheets="@style.css" text="Admin Panel" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <HBox alignment="CENTER" prefHeight="578.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="634.0" prefWidth="436.0">
+                           <children>
+                              <Text fx:id="textholder" fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="411.6337585449219">
+                                 <font>
+                                    <Font name="System Bold" size="41.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" opacity="0.89" prefHeight="513.0" prefWidth="340.0" style="-fx-background-color: #FFFFFF;" styleClass="whiteBackgroundBoxForSearchBus" stylesheets="@style.css">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <children>
+                              <HBox fx:id="UserNameInputBox" alignment="CENTER" prefHeight="38.0" prefWidth="380.0" stylesheets="@style.css">
+                                 <children>
+                                    <TextField fx:id="UserNameTextBox" prefHeight="26.0" prefWidth="228.0" promptText="Enter username" styleClass="transparentback" stylesheets="@style.css">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <ImageView fitHeight="29.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/profile.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </VBox.margin>
+                                 <styleClass>
+                                    <String fx:value="logininputBox" />
+                                    <String fx:value="boxShadow" />
+                                 </styleClass>
+                              </HBox>
+                              <HBox fx:id="passwortinputbox" alignment="CENTER" prefHeight="38.0" prefWidth="380.0" stylesheets="@style.css">
+                                 <children>
+                                    <StackPane>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <children>
+                                          <TextField fx:id="PassWorDTextBox" prefHeight="26.0" prefWidth="228.0" promptText="Enter password" styleClass="transparentback" stylesheets="@style.css" />
+                                          <PasswordField fx:id="passwordTextfieldNovisible" prefWidth="216.0" promptText="Enter password" style="-fx-background-color: transparent;" />
+                                       </children>
+                                    </StackPane>
+                                    <StackPane>
+                                       <children>
+                                          <ImageView fx:id="visiblepassword" fitHeight="29.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/passkeyVisibility.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="passkeyvisibilityoff" fitHeight="29.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/passKeyVisibilityOff.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="30.0" top="30.0" />
+                                 </VBox.margin>
+                                 <styleClass>
+                                    <String fx:value="logininputBox" />
+                                    <String fx:value="boxShadow" />
+                                 </styleClass>
+                              </HBox>
+                              <Button fx:id="LoginButton" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="36.0" prefWidth="65.0" style="-fx-background-color: #ff991c; -fx-background-radius: 30;" stylesheets="@style.css" text="Login" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="11.0" />
+                                 </font>
+                              </Button>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="75.0" prefWidth="74.0" text="Or">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Button fx:id="signup" mnemonicParsing="false" onAction="#gotoSignupPage" prefHeight="38.0" prefWidth="88.0" styleClass="loginButton" stylesheets="@style.css" text="Signup">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </center>
+               <bottom>
+                  <HBox alignment="CENTER" prefHeight="138.0" prefWidth="774.0" style="-fx-background-color: #ECECEC;" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="203.0" style="-fx-background-color: #FFFFFF;" styleClass="boxShadow" stylesheets="@style.css">
+                           <children>
+                              <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/facebook.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="166.0" style="-fx-text-fill: #ff; -fx-alignment: left;" text="Sing in with Facebook" textFill="#ff991c">
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="50.0" top="50.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="209.0" style="-fx-background-color: #FFFFFF;" styleClass="boxShadow" stylesheets="@style.css">
+                           <children>
+                              <ImageView fitHeight="18.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/google.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="154.0" style="-fx-text-fill: #ff; -fx-alignment: left;" text="Sing in with Google" textAlignment="JUSTIFY" textFill="#ff991c">
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="50.0" left="30.0" top="50.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </bottom>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

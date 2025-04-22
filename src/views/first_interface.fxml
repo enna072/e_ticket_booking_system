@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.first_page_controller">
+   <children>
+      <AnchorPane layoutY="-7.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E8E9EB;" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-7.0">
+         <children>
+            <ImageView fitHeight="706.0" fitWidth="800.0" layoutX="300.0" layoutY="115.0" opacity="0.78" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../images/busBackground_second.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="welcomelabel" layoutX="142.0" layoutY="102.0" prefHeight="64.0" prefWidth="542.0" text="WELCOME TO MY-TICKET" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="89.0" layoutY="406.0">
+               <children>
+                  <VBox fx:id="adminVbox" alignment="CENTER" prefHeight="200.0" prefWidth="187.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;" styleClass="boxShadow" stylesheets="@../CssFiles/style.css">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/first_admin.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Admin" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="serviceProviderVbox" alignment="CENTER" prefHeight="200.0" prefWidth="187.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;" styleClass="boxShadow" stylesheets="@../CssFiles/style.css">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/busforserviceprvider.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Service provider" />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox fx:id="userVbox" alignment="CENTER" prefHeight="200.0" prefWidth="187.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;" styleClass="boxShadow" stylesheets="@../CssFiles/style.css">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/userForlogin.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="User" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Text fx:id="textholder" fill="WHITE" fontSmoothingType="LCD" layoutX="142.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="542.4000000000001" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
