@@ -11,7 +11,7 @@ import java.util.*;
 import java.sql.Date;
 
 public class DatabaseHandler {
-    public static final String URL = "jdbc:mysql://127.0.0.1:3306/e_ticket_for_bus";
+    public static final String URL = "jdbc:mysql://localhost:3306/bus_database_Schema";
     public static final String USER = "root";
     public static final String PASSWORD = "15240";
     private Connection connection;
